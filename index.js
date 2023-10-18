@@ -11,7 +11,7 @@ app.use(express.json())
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Welcome to your automotive shop server!')
 })
 
 
@@ -31,7 +31,15 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
+    const database = client.db("drivenWaysDB");
+    const carCollection = database.collection("carCollection");
 
+    app.post('/products', async(req,res)=>{
+      const newCar= req.body
+      console.log(newCar)
+      const result = await carCollection.insertOne(newCar);
+      res.send(result)
+    })
 
 
     // Send a ping to confirm a successful connection
