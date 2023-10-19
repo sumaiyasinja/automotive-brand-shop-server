@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors');
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config()
 const app = express()
 const port = process.env.PORT || 5000
@@ -26,6 +26,7 @@ const client = new MongoClient(uri, {
   }
 });
 
+
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -33,6 +34,46 @@ async function run() {
 
     const database = client.db("drivenWaysDB");
     const carCollection = database.collection("carCollection");
+
+
+    app.get('/products', async(req,res)=>{
+      const cursor = carCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+  })
+
+  app.get('/products/:id', async (req, res) => {
+      const id = req.params.id
+      const filter = { _id: new ObjectId(id) }
+      const result = await carCollection.findOne(filter); 
+      res.send(result);
+    })
+  
+    app.put('/products/:id', async (req, res) => {
+      const id = req.params.id
+      const filter = { _id: new ObjectId(id) }
+      const options = { upsert: true };
+      console.log(req.body);
+      console.log("cli");
+      // const updateDoc = {
+      //   $set: {
+      //     const name : req.body.name;
+      //     const price : req.body.price;
+      //     const rating : req.body.rating;
+      //     const brands : req.body.brands;
+      //     const types : req.body.types;
+      //     const description : req.body.description;
+      //     const photo : req.body.photo;
+  
+      //   },
+      // };
+      // const result = await carCollection.updateOne(filter, updateDoc, options);
+
+    
+      // res.send(result);
+    })
+  
+
 
     app.post('/products', async(req,res)=>{
       const newCar= req.body
