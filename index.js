@@ -61,7 +61,7 @@ async function run() {
     app.put('/products/:id', async (req, res) => {
       const id = req.params.id;
       const car = req.body;
-      console.log("id", id, car);
+      console.log("Body", id, car);
       const filter = { _id: new ObjectId(id) };
       const options = { upsert: true };
       const updatedCar ={
@@ -103,6 +103,13 @@ async function run() {
           res.send(result);
           })
 
+        app.get('/cart/:id', async(req,res)=>{
+          const id = req.params.id;
+          const query = { _id: new ObjectId(id) }
+          const result = await cart.findOne(query);
+          res.send(result);
+          })
+
         // post product
         app.post('/cart', async(req,res)=>{
             const newProd= req.body
@@ -111,6 +118,13 @@ async function run() {
             res.send(result)
           })
        
+          app.delete('/cart/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: new ObjectId(id) }
+            const result = await cart.deleteOne(query);
+            res.send(result);
+        })
+          
 
 
     // Send a ping to confirm a successful connection
@@ -118,8 +132,7 @@ async function run() {
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
   } finally {
-    // Ensures that the client will close when you finish/error
-    // await client.close();
+ 
   }
 }
 run().catch(console.dir);
