@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Tesla Model 3",
+    "price": "49999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Tesla",
+    "types": "Electric Car",
+    "description": "The Tesla Model 3 is an affordable electric car that brings Tesla's technology and sustainability to a broader audience. It offers a comfortable and minimalist interior with impressive features and a user-friendly infotainment system. With quick acceleration and a long electric range, it's a practical choice for daily commuting and road trips. The Model 3 represents a blend of style, efficiency, and eco-consciousness, making it a popular option in the electric car market.",
+    "photo": "https://i.ibb.co/f8cLSg1/GUID-BEE67-A59-6-DD7-460-C-9-C49-0-DD47-E707-A02-online-en-US.png"
+  },
+  {
+    "name": "Tesla Model S",
+    "price": "88490",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Tesla",
+    "types": "Electric Car",
+    "description": "The Tesla Model S is a luxury electric car known for its innovative technology and impressive performance. It features a spacious and elegant interior with cutting-edge features, including a large touchscreen infotainment system. The Model S offers remarkable acceleration, thanks to its electric powertrain, and a generous driving range on a single charge. With a sleek design and eco-friendly credentials, it's a top choice for those seeking a premium electric driving experience.",
+    "photo": "https://i.ibb.co/6v5rryF/red-tesla-model-s-car.png"
+  },
+  {
+    "name": "Tesla Model X",
+    "price": "89999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Tesla",
+    "types": "Electric Car",
+    "description": "The Tesla Model X is a premium electric SUV designed for families and adventure-seekers. It offers an impressive combination of spaciousness, high-tech features, and electric performance. The Model X's distinctive falcon-wing doors make it stand out, while its electric powertrain ensures a smooth and silent ride. With advanced safety features and ample cargo space, it's a practical and eco-friendly choice for those in need of an SUV with a touch of luxury.",
+    "photo": "https://i.ibb.co/PjpD9pp/compositor.png"
+  },
+  {
+    "name": "BMW 3 Series",
+    "price": "55999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "BMW",
+    "types": "Electric Sedan",
+    "description": "The BMW 3 Series is a luxury sedan that has set the standard for driving dynamics and sophistication. It features a well-appointed interior with high-quality materials and intuitive technology. The 3 Series offers a range of powerful engine options and agile handling, ensuring an engaging driving experience. With a reputation for quality and style, it's an ideal choice for those seeking a harmonious blend of comfort and performance",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/BMW_G20_IMG_0167.jpg/280px-BMW_G20_IMG_0167.jpg"
+  },
+  {
+    "name": "BMW 5 Series",
+    "price": "68999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "BMW",
+    "types": "Sedan",
+    "description": "The BMW 5 Series is a high-end sedan that exudes luxury and refinement. It offers a spacious and opulent interior with top-notch materials and advanced technology. The 5 Series boasts a range of potent engine choices and a smooth, comfortable ride. With its blend of elegance and performance, it's a perfect choice for those who prioritize both comfort and driving pleasure in a premium sedan",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/BMW_G30_530e_IMG_3862.jpg/220px-BMW_G30_530e_IMG_3862.jpg"
+  },
+  {
+    "name": "BMW X3",
+    "price": "49999",
+    "rating": "⭐⭐⭐⭐",
+    "brands": "BMW",
+    "types": "SUV",
+    "description": "The BMW X3 is a compact luxury SUV that combines versatility and style. It features a well-crafted interior with modern technology and comfortable seating. The X3 provides a comfortable and dynamic ride, making it a practical choice for urban and suburban driving. With its contemporary design and premium features, it's a top pick for those seeking a luxury SUV that's easy to maneuver",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/2018_BMW_X3_%28G01%29_xDrive30i_wagon_%282018-11-02%29_01.jpg/280px-2018_BMW_X3_%28G01%29_xDrive30i_wagon_%282018-11-02%29_01.jpg"
+  },
+  {
+    "name": "Mercedes-Benz E-Class",
+    "price": "66999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Mercedes",
+    "types": "Sedan",
+    "description": "The Mercedes-Benz E-Class is a luxury sedan that defines comfort, style, and technology. It offers an exquisitely crafted interior with premium materials and advanced infotainment features. The E-Class provides a range of potent engines and a serene ride, ensuring a first-class driving experience. Known for its timeless design and innovative safety technology, it's a top choice for those who demand nothing but the best",
+    "photo": "https://www.mercedes-benz.co.in/content/india/en/passengercars/models/saloon/w213-22-2/overview/_jcr_content/root/responsivegrid/media_slider_copy/media_slider_item_1319089069/image.component.damq5.3363961900031.jpg/Image1_8.jpg"
+  },
+  {
+    "name": "Mercedes-Benz GLC",
+    "price": "70999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Mercedes",
+    "types": "SUV",
+    "description": "The Mercedes-Benz GLC is a versatile SUV that combines comfort and performance. It features a well-appointed cabin with a user-friendly infotainment system and spacious seats. The GLC offers a smooth ride and an array of engine choices for various preferences. With its stylish design and advanced features, it's an excellent option for those who seek a luxury SUV with practicality",
+    "photo": "https://imgd.aeplcdn.com/664x374/n/cw/ec/150705/glc-exterior-right-front-three-quarter-94.jpeg?isig=0&q=80&q=80"
+  },
+  {
+    "name": "Mercedes-Benz S-Class",
+    "price": "89999",
+    "rating": "⭐⭐⭐⭐",
+    "brands": "Mercedes",
+    "types": "Sedan",
+    "description": "The Mercedes-Benz S-Class is an iconic luxury sedan known for its opulence and innovation. It boasts a sumptuous interior with the latest technology and top-tier materials. The S-Class delivers a serene and powerful ride, setting the standard for comfort and performance in the luxury segment. With its timeless elegance and groundbreaking features, it's a premier choice for those who demand the utmost in automotive excellence",
+    "photo": "https://i.ibb.co/9gk4w2N/1-Mercedes-S-Class-plug-in.webp"
+  },
+  {
+    "name": "Ferrari F8 Tributo",
+    "price": "289999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Ferrari",
+    "types": "Sports Car",
+    "description": "The Ferrari F8 Tributo is a high-performance sports car that embodies the essence of speed and style. It features a cockpit-inspired interior with a focus on the driver and a race-inspired steering wheel. The F8 Tributo delivers blistering acceleration and razor-sharp handling, thanks to its powerful engine and advanced aerodynamics. With its striking design and track-ready performance, it's the ultimate choice for those who crave the thrill of the open road",
+    "photo": "https://cdn.ferrari.com/cms/network/media/img/resize/5d26fdb7c3f9ec0af6475619-01_fb_ppl_intro_lp3lhwq8?width=1080"
+  },
+  {
+    "name": "Ferrari 488 Pista",
+    "price": "349999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Ferrari",
+    "types": "Super Car",
+    "description": "The Ferrari 488 Pista is a supercar that pushes the limits of performance and excitement. It offers a minimalist and driver-focused interior with a racing-inspired ambiance. The 488 Pista boasts astonishing acceleration and precise handling, thanks to its powerful engine and aerodynamic enhancements. With its aggressive styling and incredible speed, it's the epitome of automotive excellence for those who demand the finest",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2017_Ferrari_488_GTB_Automatic_3.9.jpg/280px-2017_Ferrari_488_GTB_Automatic_3.9.jpg"
+  },
+  {
+    "name": "Ferrari Portofino",
+    "price": "229999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Ferrari",
+    "types": "Convertible",
+    "description": "The Ferrari Portofino is a convertible sports car that combines thrilling performance with open-air driving pleasure. It features a well-crafted cabin with a retractable hardtop roof and high-quality materials. The Portofino offers brisk acceleration and sharp handling, making it a joy to drive on winding roads. With its striking looks and the ability to enjoy the sun and wind, it's a superb choice for those who seek an exhilarating driving experience",
+    "photo": "https://i.ibb.co/K9j8Prd/2021-ferrari-portofino-m-117-1621623712.jpg"
+  },
+  {
+    "name": "Audi A3",
+    "price": "41999",
+    "rating": "⭐⭐⭐",
+    "brands": "Audi",
+    "types": "Sedan",
+    "description": "The Audi A3 is a compact luxury sedan known for its sophistication and performance. It features a refined and well-appointed interior with advanced technology and comfortable seats. The A3 offers zippy acceleration and agile handling, ensuring a delightful driving experience. With its timeless design and premium features, it's a compelling choice for those who desire luxury in a compact package",
+    "photo": "https://www.audi-mediacenter.com/system/production/cars/8/photos/7c22a2763314cfec1a377b419acb094a27de6a4a/web_480_Audi_A3_Sportback.jpg?1691577058"
+  },
+  {
+    "name": "RS 3 Sedan",
+    "price": "49999",
+    "rating": "⭐⭐⭐⭐⭐",
+    "brands": "Audi",
+    "types": "Sedan",
+    "description": "Combined fuel consumption in l/100 km*: 9.4 - 8.9 (WLTP); combined CO2 emissions in g/km*: 214 - 201 (WLTP)",
+    "photo": "https://www.audi-mediacenter.com/system/production/cars/216/photos/62a6e55dd1cd97ddfa99960d067de4a264f07ed1/web_480_Audi_RS_3_Limousine.jpg?1691577209"
+  }
+]

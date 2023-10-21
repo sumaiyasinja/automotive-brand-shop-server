@@ -34,6 +34,7 @@ async function run() {
     const database = client.db("BrandCarShopDB");
     const CarsCollection = database.collection("CarsCollection");
     const brandCollection = database.collection("brandCollection");
+    const cart = database.collection("cart");
 
     // Read all products
     app.get('/products', async(req,res)=>{  
@@ -95,7 +96,21 @@ async function run() {
       const result = await brandCollection.findOne(filter);
       res.send(result);
     })
-    
+    //Cart
+        // Read all products of cart
+        app.get('/cart', async(req,res)=>{
+          const result = await cart.find().toArray();
+          res.send(result);
+          })
+
+        // post product
+        app.post('/cart', async(req,res)=>{
+            const newProd= req.body
+            console.log(newProd)
+            const result = await cart.insertOne(newProd);
+            res.send(result)
+          })
+       
 
 
     // Send a ping to confirm a successful connection
