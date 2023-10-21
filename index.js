@@ -18,69 +18,84 @@ app.get('/', (req, res) => {
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ctrkbrk.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+  const client = new MongoClient(uri, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    }
+  });
 
 
 async function run() {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
-    const database = client.db("drivenWaysDB");
-    const carCollection = database.collection("carCollection");
+    const database = client.db("BrandCarShopDB");
+    const CarsCollection = database.collection("CarsCollection");
+    const brandCollection = database.collection("brandCollection");
 
-
-    app.get('/products', async(req,res)=>{
-      const cursor = carCollection.find();
-      const result = await cursor.toArray();
-      res.send(result);
-  })
-
-  app.get('/products/:id', async (req, res) => {
-      const id = req.params.id
-      const filter = { _id: new ObjectId(id) }
-      const result = await carCollection.findOne(filter); 
+    // Read all products
+    app.get('/products', async(req,res)=>{  
+      const result = await CarsCollection.find().toArray();
       res.send(result);
     })
-  
-    app.put('/products/:id', async (req, res) => {
-      const id = req.params.id
-      const filter = { _id: new ObjectId(id) }
-      const options = { upsert: true };
-      console.log(req.body);
-      console.log("cli");
-      // const updateDoc = {
-      //   $set: {
-      //     const name : req.body.name;
-      //     const price : req.body.price;
-      //     const rating : req.body.rating;
-      //     const brands : req.body.brands;
-      //     const types : req.body.types;
-      //     const description : req.body.description;
-      //     const photo : req.body.photo;
-  
-      //   },
-      // };
-      // const result = await carCollection.updateOne(filter, updateDoc, options);
-
-    
-      // res.send(result);
-    })
-  
-
-
+    // post product
     app.post('/products', async(req,res)=>{
-      const newCar= req.body
-      console.log(newCar)
-      const result = await carCollection.insertOne(newCar);
-      res.send(result)
+        const newCar= req.body
+        console.log(newCar)
+        const result = await CarsCollection.insertOne(newCar);
+        res.send(result)
+      })
+
+      // get single product
+    app.get('/products/:id', async (req, res) => {
+          const id = req.params.id
+          const filter = { _id: new ObjectId(id) }
+          const result = await CarsCollection.findOne(filter); 
+          res.send(result);
+        })
+        
+    // update by id
+    app.put('/products/:id', async (req, res) => {
+      const id = req.params.id;
+      const car = req.body;
+      console.log("id", id, car);
+      const filter = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const updatedCar ={
+        $set: {
+         name : car.name,
+         price : car.price,
+         rating : car.rating,
+         brands : car.brands,
+         types : car.types,
+         description : car.description,
+         photo : car.photo,
+
+      },
+    };
+      const result = await CarsCollection.updateOne(
+        filter,
+        updatedCar,
+        options
+      );
+      res.send(result);
+    });
+
+
+    // Brand collection
+    app.get('/brands', async (req, res) => {
+      const result = await brandCollection.find().toArray();
+      res.send(result);
     })
+    app.get('/brands/:brands', async (req, res) => {
+      const brands = req.params.brands;
+      const filter = { brands: {$eq :(brands)} };
+      const result = await brandCollection.findOne(filter);
+      res.send(result);
+    })
+    
 
 
     // Send a ping to confirm a successful connection
