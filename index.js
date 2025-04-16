@@ -29,7 +29,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
 
     const database = client.db("BrandCarShopDB");
     const CarsCollection = database.collection("CarsCollection");
